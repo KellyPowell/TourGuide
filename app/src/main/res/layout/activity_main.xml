@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="@string/dining"
+        android:background="@color/DiningColor"
+        style="@style/CategoryStyle"
+        android:onClick="openDiningActivity"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="@string/outdoors"
+        android:background="@color/OutdoorsColor"
+        style="@style/CategoryStyle"
+        android:onClick="openOutdoorsActivity"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="@string/shopping"
+        android:background="@color/ShoppingColor"
+        style="@style/CategoryStyle"
+        android:onClick="openShoppingActivity"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="@string/art"
+        android:background="@color/ArtColor"
+        style="@style/CategoryStyle"
+        android:onClick="openArtActivity"/>
+
+</LinearLayout>

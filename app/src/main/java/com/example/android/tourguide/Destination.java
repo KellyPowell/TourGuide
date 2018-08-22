@@ -32,14 +32,14 @@ public class Destination {
     // boolean, whether destination has address
     private Boolean hasAddress;
 
-    // constructor for name, city, description, address, imageResourceId
+    // constructor for name, city, description, imageResourceId
     public Destination(String destinationName, String city, String destinationDescription,
                        int imageResourceId) {
         this.destinationName = destinationName;
         this.city = city;
         this.destinationDescription = destinationDescription;
         this.imageResourceId = imageResourceId;
-        this.hasAddress = true;
+        this.hasAddress = false;
         this.hasWebsite = false;
         this.hasPhone = false;
     }
@@ -73,7 +73,7 @@ public class Destination {
     }
 
 
-    // constructor to hold our two name, city, address, imageResourceId, phone number, website
+    // constructor for name, city, description, address, imageResourceId, website, phone number
     public Destination(String destinationName, String city, String destinationDescription, String
             destinationAddress, int imageResourceId, String destinationWebsite, String
                                destinationPhone) {

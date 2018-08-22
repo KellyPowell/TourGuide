@@ -23,29 +23,29 @@ public class OutdoorsActivity extends AppCompatActivity {
         destinations.add(new Destination("Montana de Oro", "Los Osos",
                 "A real gem of the Central Coast. Be sure to check out Spooner's " +
                         "Cove, the Bluff Trail, and the tidal pools.",
-                "3550 Pecho Valley Rd, Los Osos, CA 93402", R.drawable.mdo,
+                "geo:0,0?q=Montana+de+Oro+Park+Los+Osos+CA", R.drawable.mdo,
                 "http://www.parks.ca.gov/?page_id=592"));
         destinations.add(new Destination("Oso Flaco Lake Trail", "Nipomo",
                 "Very easy beautiful trail. The trail turns into a boardwalk that" +
                         " crosses the lake, always teeming with birds. Continue down the trail all " +
                         "the way to the ocean.",
-                "Oso Flaco Lake Rd, Nipomo, CA 93420", R.drawable.oso,
+                "geo:0,0?q=Oso+Flaco+Lake+Rd+Nipomo+CA+93420", R.drawable.oso,
                 "https://www.alltrails.com/trail/us/california/oso-flaco-lake-trail"));
         destinations.add(new Destination("Morro Rock", "Morro Bay",
                 "An idyllic backdrop for Morro Bay, Morro Rock is a 576' tall " +
                         "extinct volcanic peak. This landmark stands at the mouth of the harbor and " +
                         "is home to nesting Peregrine Falcons. ",
-                "1300 Embarcadero, Morro Bay, CA, 93442", R.drawable.morro_rock,
-                "www.morrobay.org/things-to-do/outdoors/morro-rock"));
+                "geo:0,0?q=1300+Embarcadero+Morro+Bay+CA+93442", R.drawable.morro_rock,
+                "https://www.morro-bay.ca.us/383/Morro-Rock-Beach"));
         destinations.add(new Destination("Elephant Seal Rookery", "San Simeon",
                 "This popular spot to observe elephant seals has a boardwalk & " +
                         "viewing areas. The peak season is December to March.",
-                "Piedras Blancas, San Simeon, CA 93452-9715", R.drawable.seal,
+                "geo:0,0?q=Elephant+Seal+Vista+Point+San+Simeon+CA", R.drawable.seal,
                 "http://www.elephantseal.org/"));
         destinations.add(new Destination("Monarch Butterfly Grove", "Pismo Beach",
                 "Eucalyptus grove with thousands of monarch butteries " +
                         "in late October through February.",
-                "400 S Dolliver St, Pismo Beach, CA 93449", R.drawable.monarch,
+                "geo:0,0?q=Monarch+Butterfly+Grove+Pismo+Beach+CA+93449", R.drawable.monarch,
                 "http://www.monarchbutterfly.org/"));
 
         // Create an DestinationAdapater, whose data source is a list of Destinations. The

@@ -1,6 +1,7 @@
 package com.example.android.tourguide;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.v4.content.ContextCompat;
@@ -96,25 +97,38 @@ public class DestinationAdapter extends ArrayAdapter<Destination> {
             // Set this image on the ImageView
             phoneIcon.setImageResource(R.drawable.baseline_phone_white_24dp);
 
-        /*set a click listener to dial the phone number
-        phoneIcon.setOnClickListener(new View.OnClickListener() {
-            String phoneNumber = currentDestination.getDestinationPhone();
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + phoneNumber));
-                startActivity(intent);
-            }
-        });*/
+            //set a click listener to dial the phone number
+            phoneIcon.setOnClickListener(new View.OnClickListener() {
+                String phoneNumber = currentDestination.getDestinationPhone();
+
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + phoneNumber));
+                    getContext().startActivity(intent);
+                }
+            });
 
         }
 
 
         if (currentDestination.getHasWebsite()) {
             // Find the ImageView in the list_item.xml layout with the ID email_icon
-            ImageView emailIcon = (ImageView) listItemView.findViewById(R.id.email_icon);
+            ImageView websiteIcon = (ImageView) listItemView.findViewById(R.id.email_icon);
 
             // Set this image on the ImageView
-            emailIcon.setImageResource(R.drawable.baseline_email_white_24dp);
+            websiteIcon.setImageResource(R.drawable.baseline_launch_white_24dp);
+
+            //set a click listener to dial the phone number
+            websiteIcon.setOnClickListener(new View.OnClickListener() {
+                String url = currentDestination.getDestinationWebsite();
+
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(Intent.ACTION_VIEW);
+                    intent.setData(Uri.parse(url));
+                    getContext().startActivity(intent);
+                }
+            });
         }
 
 
@@ -124,7 +138,20 @@ public class DestinationAdapter extends ArrayAdapter<Destination> {
 
             // Set this image on the ImageView
             mapIcon.setImageResource(R.drawable.baseline_map_white_24dp);
+
+            //set a click listener to dial the phone number
+            mapIcon.setOnClickListener(new View.OnClickListener() {
+                String address = currentDestination.getDestinationAddress();
+
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("google.navigation:" + address));
+                    intent.setData(Uri.parse(address));
+                    getContext().startActivity(intent);
+                }
+            });
         }
+
 
         // Set the theme color for the list item
         View textContainer = listItemView.findViewById(R.id.text_container);

@@ -18,7 +18,7 @@ public class ArtActivity extends AppCompatActivity {
 
         destinations.add(new Destination("Kelly Powell Glass", "Atascadero",
                 "Kelly makes glass marbles. They're getting better.",
-                "521 Buena Fortuna Cir, Atascadero, CA 93422", R.drawable.greenmib,
+                "geo:0,0?q=521+Buena+Fortuna+Circle+Atascadero+CA", R.drawable.greenmib,
                 "https://www.instagram.com/glassbykelly/", "715-379-1248"));
         destinations.add(new Destination("By the Bay Gallery", "Morro Bay",
                 "For over three decades, they continue to offer the best selection" +
@@ -26,12 +26,12 @@ public class ArtActivity extends AppCompatActivity {
                         "Central Coast. Whether it's art glass, custom jewelry, wood, ceramics or " +
                         "enamel sculpture, they sell unique, fine quality crafts and provide " +
                         "exceptional personal service.",
-                "895 Embarcadero, Morro Bay, CA 93442", R.drawable.btb,
+                "geo:0,0?q=895+Embarcadero+Morro+Bay+CA+93442", R.drawable.btb,
                 "https://www.bythebaygallery.com/", "805-772-5563"));
         destinations.add(new Destination("Kate Payne Glass", "Arroyo Grande",
                 "Kate is an all-around bad motherfucker, and a natural at " +
                         "sculpting glass in the flame. Can't wait to see what she makes next!",
-                "address", R.drawable.kate, "https://www.instagram.com/payne_inthe_glass/",
+                "geo:0,0?q=Arroyo+Grande", R.drawable.kate, "https://www.instagram.com/payne_inthe_glass/",
                 "805-305-0505"));
         destinations.add(new Destination("Elevator Glass", "Pismo Beach",
                 "OOhhh....that's how you fume. Damn, son.",R.drawable.brebes,

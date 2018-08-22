@@ -22,22 +22,21 @@ public class ShoppingActivity extends AppCompatActivity {
                         "on the Central Coast. Whether it's art glass, custom jewelry, wood, " +
                         "ceramics or enamel sculpture, they sell unique, fine quality crafts and " +
                         "provide exceptional personal service.",
-                "895 Embarcadero, Morro Bay, CA 93442", R.drawable.btb,
+                "geo:0,0?q=By+The+Bay+Gallery+Morro+Bay+CA", R.drawable.btb,
                 "https://www.bythebaygallery.com/", "805-772-5563"));
         destinations.add(new Destination("COVE", "Pismo Beach",
                 "COVE by Van Rozeboom Interiors is a full service interior " +
                         "design studio and home decor boutique in beautiful Pismo Beach.",
-                "880 Price St, Pismo Beach, California 93449", R.drawable.cove,
+                "geo:0,0?q=880+Price+St+Pismo+Beach+California+93449", R.drawable.cove,
                 "http://www.cove805.com/", "805-556-4325"));
         destinations.add(new Destination("BoltAbout", "San Luis Obispo",
                 "BoltAbout leases electric bicycles on a monthly basis to provide" +
                         " customers with fun, fast, and sustainable transportation. The bikes reach " +
                         "speeds of 22 mph and have a battery range of 20-40 miles.",
-                "880 Price St, Pismo Beach, California 93449", R.drawable.ba,
+                "geo:0,0?q=880+Price+St+Pismo+Beach+California+93449", R.drawable.ba,
                 "https://boltabout.com/", "805-858-9702"));
         destinations.add(new Destination("Place with no address or phone", "ATown",
-                "this is a place with no phone, website or address",
-                R.drawable.bluerose, "google.com"));
+                "this is a place with no phone, website or address", R.drawable.bluerose));
 
 
         // Create an DestinationAdapater, whose data source is a list of Destinations. The

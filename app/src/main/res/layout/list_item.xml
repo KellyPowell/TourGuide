@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:animateLayoutChanges="false"
     android:minHeight="100dp"
     android:orientation="horizontal">
 
@@ -10,8 +11,8 @@
         android:id="@+id/image"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:scaleType="centerCrop"
-        android:layout_marginBottom="4dp"/>
+        android:layout_marginBottom="4dp"
+        android:scaleType="centerCrop" />
 
     <LinearLayout
         android:id="@+id/text_container"
@@ -48,17 +49,40 @@
 
     </LinearLayout>
 
+    <!-- adding expand button-->
+    <ImageView
+        android:id="@+id/expand_arrow"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/baseline_expand_more_white_24dp"
+        android:visibility="visible"/>
+
+    <!-- adding collapse button-->
+    <ImageView
+        android:id="@+id/collapse_arrow"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/baseline_expand_less_white_24dp"
+        android:visibility="gone" />
+
+    <!-- adding description container for description and icons, we can hide/expand-->
     <RelativeLayout
         android:id="@+id/description_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="gone"
-        tools:visibility="visible"
-        android:background="@color/OutdoorsColor"
         android:layout_below="@id/text_container"
-        android:padding="32dp"
+        android:background="@color/OutdoorsColor"
         android:orientation="vertical"
-        >
+        android:layout_marginBottom="4dp"
+        android:padding="32dp"
+        android:visibility="gone"
+        tools:visibility="visible">
 
         <TextView
             android:id="@+id/description_text_view"
@@ -71,33 +95,32 @@
 
         <LinearLayout
             android:id="@+id/icon_view"
-            android:layout_below="@id/description_text_view"
-            android:layout_alignParentLeft="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/description_text_view"
             android:orientation="horizontal"
-            android:paddingTop="16dp" >
+            android:paddingTop="16dp">
 
             <ImageView
 
                 android:id="@+id/map_icon"
                 android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
 
             <ImageView
 
                 android:id="@+id/email_icon"
                 android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
 
             <ImageView
-
                 android:id="@+id/phone_icon"
                 android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
 
 
         </LinearLayout>

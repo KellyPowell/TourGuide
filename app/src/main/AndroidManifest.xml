@@ -18,16 +18,20 @@
         </activity>
         <activity
             android:name=".DiningActivity"
-            android:label="Dining" />
+            android:label="Dining"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".OutdoorsActivity"
-            android:label="Outdoors" />
+            android:label="Outdoors"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".ShoppingActivity"
-            android:label="Shopping" />
+            android:label="Shopping"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".ArtActivity"
-            android:label="Art"></activity>
+            android:label="Art"
+            android:parentActivityName=".MainActivity"></activity>
     </application>
 
 </manifest>

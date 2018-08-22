@@ -17,20 +17,23 @@ public class DiningActivity extends AppCompatActivity {
         final ArrayList<Destination> destinations = new ArrayList<>();
 
         destinations.add(new Destination("El Tapatio", "Guadalupe",
-                ";lkadsg;kljads;lgkjadsg;lkjads;lgkjasd;glkjadsg;lkj",
+                "The best Mexican food I've ever had, period. No kidding. Hole " +
+                        "in the wall family place in a sleepy little town. Trust me, it's worth the drive!",
                 "914 Guadalupe St, Guadalupe, CA 93434", R.drawable.et,
                 "https://www.yelp.com/biz/el-tapatio-guadalupe",
                 "805-343-2850"));
         destinations.add(new Destination("Taco Temple", "Morro Bay",
-                ";lkadsg;kljads;lgkjadsg;lkjads;lgkjasd;glkjadsg;lkj",
+                "Amazing fresh seafood, Mexican meals, and desserts.",
                 "2680 North Main Street, Morro Bay, CA 93442", R.drawable.tt,
                 "http://tacotemple.com/tt", "805-772-4965"));
         destinations.add(new Destination("Wow Yanagi Sushi", "Pismo Beach",
-                ";lkadsg;kljads;lgkjadsg;lkjads;lgkjasd;glkjadsg;lkj",
+                "My favorite Sushi spot on the Central Coast. Always fresh and " +
+                        "delicious, with great service.",
                 "869 N Oak Park Blvd, Pismo Beach, CA 93449", R.drawable.sushi,
                 "http://www.yanagisushigrill.com/", "805-489-6358"));
         destinations.add(new Destination("High Street Deli", "San Luis Obispo",
-                ";lkadsg;kljads;lgkjadsg;lkjads;lgkjasd;glkjadsg;lkj",
+                "They're busy for a reason. My favorite sandwich is the Heisenburger. " +
+                        "Do yourself a favor and get one!",
                 "350 High St, San Luis Obispo, CA 93401",
                 R.drawable.highst, "https://www.highstdeli.com/",
                 "805-541-4738"));

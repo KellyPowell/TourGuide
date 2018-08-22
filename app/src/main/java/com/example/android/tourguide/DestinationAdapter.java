@@ -54,9 +54,13 @@ public class DestinationAdapter extends ArrayAdapter<Destination> {
             public void onClick(View v) {
                 if (!isExpanded) {
                     v.findViewById(R.id.description_container).setVisibility(View.VISIBLE);
+                    v.findViewById(R.id.collapse_arrow).setVisibility(View.VISIBLE);
+                    v.findViewById(R.id.expand_arrow).setVisibility(View.GONE);
                     isExpanded = true;
                 } else {
                     v.findViewById(R.id.description_container).setVisibility(View.GONE);
+                    v.findViewById(R.id.collapse_arrow).setVisibility(View.GONE);
+                    v.findViewById(R.id.expand_arrow).setVisibility(View.VISIBLE);
                     isExpanded = false;
                 }
             }
@@ -85,25 +89,42 @@ public class DestinationAdapter extends ArrayAdapter<Destination> {
         TextView descriptionTextView = (TextView) listItemView.findViewById(R.id.description_text_view);
         descriptionTextView.setText(currentDestination.getDestinationDescription());
 
-        // Find the ImageView in the list_item.xml layout with the ID phone_icon
-        ImageView phoneIcon = (ImageView) listItemView.findViewById(R.id.phone_icon);
-        // Set this image on the ImageView
-        phoneIcon.setImageResource(R.drawable.baseline_phone_white_24dp);
+        if (currentDestination.getHasPhone()) {
+            // Find the ImageView in the list_item.xml layout with the ID phone_icon
+            ImageView phoneIcon = (ImageView) listItemView.findViewById(R.id.phone_icon);
+
+            // Set this image on the ImageView
+            phoneIcon.setImageResource(R.drawable.baseline_phone_white_24dp);
+
+        /*set a click listener to dial the phone number
+        phoneIcon.setOnClickListener(new View.OnClickListener() {
+            String phoneNumber = currentDestination.getDestinationPhone();
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + phoneNumber));
+                startActivity(intent);
+            }
+        });*/
+
+        }
 
 
+        if (currentDestination.getHasWebsite()) {
+            // Find the ImageView in the list_item.xml layout with the ID email_icon
+            ImageView emailIcon = (ImageView) listItemView.findViewById(R.id.email_icon);
+
+            // Set this image on the ImageView
+            emailIcon.setImageResource(R.drawable.baseline_email_white_24dp);
+        }
 
 
-        // Find the ImageView in the list_item.xml layout with the ID email_icon
-        ImageView emailIcon = (ImageView) listItemView.findViewById(R.id.email_icon);
-        // Set this image on the ImageView
-        emailIcon.setImageResource(R.drawable.baseline_email_white_24dp);
+        if (currentDestination.getHasAddress()) {
+            // Find the ImageView in the list_item.xml layout with the ID map_icon
+            ImageView mapIcon = (ImageView) listItemView.findViewById(R.id.map_icon);
 
-
-        // Find the ImageView in the list_item.xml layout with the ID map_icon
-        ImageView mapIcon = (ImageView) listItemView.findViewById(R.id.map_icon);
-        // Set this image on the ImageView
-        mapIcon.setImageResource(R.drawable.baseline_map_white_24dp);
-
+            // Set this image on the ImageView
+            mapIcon.setImageResource(R.drawable.baseline_map_white_24dp);
+        }
 
         // Set the theme color for the list item
         View textContainer = listItemView.findViewById(R.id.text_container);
@@ -113,7 +134,7 @@ public class DestinationAdapter extends ArrayAdapter<Destination> {
         textContainer.setBackgroundColor(color);
 
 
-        // Set the theme color for the description conatiner
+        // Set the theme color for the description container
         View descriptionContainer = listItemView.findViewById(R.id.description_container);
         descriptionContainer.setBackgroundColor(color);
 

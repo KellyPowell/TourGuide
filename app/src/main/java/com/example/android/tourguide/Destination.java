@@ -23,7 +23,28 @@ public class Destination {
     // description of the destination
     private String destinationDescription;
 
-    // constructor for name, city, description, image, website only
+    // boolean, whether this destination has phone
+    private Boolean hasPhone;
+
+    // boolean, whether this destination has website
+    private Boolean hasWebsite;
+
+    // boolean, whether destination has address
+    private Boolean hasAddress;
+
+    // constructor for name, city, description, address, imageResourceId
+    public Destination(String destinationName, String city, String destinationDescription,
+                       int imageResourceId) {
+        this.destinationName = destinationName;
+        this.city = city;
+        this.destinationDescription = destinationDescription;
+        this.imageResourceId = imageResourceId;
+        this.hasAddress = true;
+        this.hasWebsite = false;
+        this.hasPhone = false;
+    }
+
+    // constructor for name, city, description, imageResourceId, website
     public Destination(String destinationName, String city, String destinationDescription,
                        int imageResourceId, String destinationWebsite) {
         this.destinationName = destinationName;
@@ -31,9 +52,13 @@ public class Destination {
         this.destinationDescription = destinationDescription;
         this.imageResourceId = imageResourceId;
         this.destinationWebsite = destinationWebsite;
+        hasWebsite = true;
+        hasAddress = false;
+        hasPhone = false;
     }
 
-    // constructor for name, city, address, imageResourceId, website
+
+    // constructor for name, city, description, address, imageResourceId, website
     public Destination(String destinationName, String city, String destinationDescription,
                        String destinationAddress, int imageResourceId, String destinationWebsite) {
         this.destinationName = destinationName;
@@ -42,6 +67,9 @@ public class Destination {
         this.destinationAddress = destinationAddress;
         this.imageResourceId = imageResourceId;
         this.destinationWebsite = destinationWebsite;
+        hasWebsite = true;
+        hasPhone = false;
+        hasAddress = true;
     }
 
 
@@ -56,6 +84,9 @@ public class Destination {
         this.imageResourceId = imageResourceId;
         this.destinationWebsite = destinationWebsite;
         this.destinationPhone = destinationPhone;
+        hasPhone = true;
+        hasWebsite = true;
+        hasAddress = true;
     }
 
 
@@ -88,4 +119,13 @@ public class Destination {
         return destinationWebsite;
     }
 
+    public Boolean getHasPhone() { return hasPhone; }
+
+    public Boolean getHasWebsite() {
+        return hasWebsite;
+    }
+
+    public Boolean getHasAddress() {
+        return hasAddress;
+    }
 }

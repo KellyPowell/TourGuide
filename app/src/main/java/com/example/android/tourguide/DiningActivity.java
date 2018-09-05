@@ -27,7 +27,7 @@ public class DiningActivity extends AppCompatActivity {
                 "geo:0,0?q=Taco+Temple+Morro+Bay+CA", R.drawable.tt,
                 "http://tacotemple.com", "805-772-4965"));
         destinations.add(new Destination("Wow Yanagi Sushi", "Pismo Beach",
-                "My favorite Sushi spot on the Central Coast. Always fresh and " +
+                "My favorite sushi spot on the Central Coast. Always fresh and " +
                         "delicious, with great service.",
                 "geo:0,0?q=Wow+Yanagi+Sushi+Pismo+Beach+CA", R.drawable.sushi,
                 "http://www.yanagisushigrill.com/", "805-489-6358"));
@@ -37,6 +37,20 @@ public class DiningActivity extends AppCompatActivity {
                 "geo:0,0?q=High+Street+Deli+San+Luis+Obispo+CA",
                 R.drawable.highst, "https://www.highstdeli.com/",
                 "805-541-4738"));
+        destinations.add(new Destination("Pier 46 Seafood Market", "Templeton",
+                "Best fish and chips in the county.",
+                "geo:0,0?q=1131+Rossi+Rd+Templeton+CA+93465", R.drawable.pier46,
+                "http://www.pier46seafood.com/", "805-434-1950"));
+        destinations.add(new Destination("Marston's 101", "Atascadero",
+                "Wood fired pizzas, burgers, comfort food.",
+                "geo:0,0?q=9006+West+Front+Road+CA+93422", R.drawable.marstons,
+                "https://www.marstons101atascadero.com/", "805-434-1950"));
+        destinations.add(new Destination("Giuseppe's", "Pismo Beach",
+                "Fantastic pizza and Italian food.",
+                "geo:0,0?q=891+Price+Street+Pismo Beach+CA+93449", R.drawable.giu,
+                "http://giusepperustica.wixsite.com/pismogiuseppes", "805-773-2870"));
+
+
 
         // Create an DestinationAdapater, whose data source is a list of Destinations. The
         // adapter knows how to create list items for each item in the list.
@@ -45,7 +59,7 @@ public class DiningActivity extends AppCompatActivity {
         // Find the ListView object in the view hierarchy of the Activity.
         // There should be a ListView with the view ID called list, which is declared in the
         // word_list.xml layout file.
-        ListView listView = (ListView) findViewById(R.id.list);
+        ListView listView = findViewById(R.id.list);
 
         // Make the ListView use the DestinationAdapter we created above, so that the
         // ListView will display list items for each Destination in the list.

@@ -31,7 +31,7 @@ public class ArtActivity extends AppCompatActivity {
         destinations.add(new Destination("Kate Payne Glass", "Arroyo Grande",
                 "Kate is an all-around bad motherfucker, and a natural at " +
                         "sculpting glass in the flame. Can't wait to see what she makes next!",
-                "geo:0,0?q=Arroyo+Grande", R.drawable.kate, "https://www.instagram.com/payne_inthe_glass/",
+                "geo:0,0?q=294+Spruce+St+Arroyo+Grande", R.drawable.kate, "https://www.instagram.com/payne_inthe_glass/",
                 "805-305-0505"));
         destinations.add(new Destination("Elevator Glass", "Pismo Beach",
                 "OOhhh....that's how you fume. Damn, son.",R.drawable.brebes,
@@ -44,7 +44,7 @@ public class ArtActivity extends AppCompatActivity {
         // Find the ListView object in the view hierarchy of the Activity.
         // There should be a ListView with the view ID called list, which is declared in the
         // word_list.xml layout file.
-        ListView listView = (ListView) findViewById(R.id.list);
+        ListView listView = findViewById(R.id.list);
 
         // Make the ListView use the DestinationAdapter we created above, so that the
         // ListView will display list items for each Destination in the list.

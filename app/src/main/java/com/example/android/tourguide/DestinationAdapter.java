@@ -1,7 +1,6 @@
 package com.example.android.tourguide;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.v4.content.ContextCompat;
@@ -9,11 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
@@ -72,27 +68,27 @@ public class DestinationAdapter extends ArrayAdapter<Destination> {
 
 
         // Find the TextView in the list_item.xml layout with the ID name_text_view
-        TextView nameTextView = (TextView) listItemView.findViewById(R.id.name_text_view);
+        TextView nameTextView = listItemView.findViewById(R.id.name_text_view);
         // Set this text on the name TextView
         nameTextView.setText(currentDestination.getDestinationName());
 
         // Find the TextView in the list_item.xml layout with the city text view
-        TextView cityTextView = (TextView) listItemView.findViewById(R.id.city_text_view);
+        TextView cityTextView = listItemView.findViewById(R.id.city_text_view);
         // set this text on the city TextView
         cityTextView.setText(currentDestination.getCity());
 
 
         // Find the ImageView in the list_item.xml layout with the ID image
-        ImageView imageView = (ImageView) listItemView.findViewById(R.id.image);
+        ImageView imageView = listItemView.findViewById(R.id.image);
         // Set this image on the ImageView
         imageView.setImageResource(currentDestination.getImageResourceId());
 
-        TextView descriptionTextView = (TextView) listItemView.findViewById(R.id.description_text_view);
+        TextView descriptionTextView = listItemView.findViewById(R.id.description_text_view);
         descriptionTextView.setText(currentDestination.getDestinationDescription());
 
         if (currentDestination.getHasPhone()) {
             // Find the ImageView in the list_item.xml layout with the ID phone_icon
-            ImageView phoneIcon = (ImageView) listItemView.findViewById(R.id.phone_icon);
+            ImageView phoneIcon = listItemView.findViewById(R.id.phone_icon);
 
             // Set this image on the ImageView
             phoneIcon.setImageResource(R.drawable.baseline_phone_white_24dp);
@@ -113,7 +109,7 @@ public class DestinationAdapter extends ArrayAdapter<Destination> {
 
         if (currentDestination.getHasWebsite()) {
             // Find the ImageView in the list_item.xml layout with the ID email_icon
-            ImageView websiteIcon = (ImageView) listItemView.findViewById(R.id.email_icon);
+            ImageView websiteIcon = listItemView.findViewById(R.id.website_icon);
 
             // Set this image on the ImageView
             websiteIcon.setImageResource(R.drawable.baseline_launch_white_24dp);
@@ -134,7 +130,7 @@ public class DestinationAdapter extends ArrayAdapter<Destination> {
 
         if (currentDestination.getHasAddress()) {
             // Find the ImageView in the list_item.xml layout with the ID map_icon
-            ImageView mapIcon = (ImageView) listItemView.findViewById(R.id.map_icon);
+            ImageView mapIcon = listItemView.findViewById(R.id.map_icon);
 
             // Set this image on the ImageView
             mapIcon.setImageResource(R.drawable.baseline_map_white_24dp);

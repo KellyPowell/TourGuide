@@ -5,9 +5,9 @@
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/slo_round"
         android:label="SLO County Tour Guide"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/slo_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
@@ -32,7 +32,7 @@
         <activity
             android:name=".ArtActivity"
             android:label="Art"
-            android:parentActivityName=".MainActivity"></activity>
+            android:parentActivityName=".MainActivity" />
     </application>
 
 </manifest>

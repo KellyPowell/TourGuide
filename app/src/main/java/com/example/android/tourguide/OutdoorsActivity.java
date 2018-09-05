@@ -1,7 +1,5 @@
 package com.example.android.tourguide;
 
-import android.content.Intent;
-import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -47,6 +45,18 @@ public class OutdoorsActivity extends AppCompatActivity {
                         "in late October through February.",
                 "geo:0,0?q=Monarch+Butterfly+Grove+Pismo+Beach+CA+93449", R.drawable.monarch,
                 "http://www.monarchbutterfly.org/"));
+        destinations.add(new Destination("Sub Sea Tours", "Morro Bay",
+                "Whale watching and harbor tours. Peak months for seeing humpback" +
+                        "whales are May through July.",
+                "geo:0,0?q=699+Embarcadero+Morro+Bay+CA+93442", R.drawable.humpback,
+                "http://www.subseatours.com", "805-772-9463"));
+        destinations.add(new Destination("Moonstone Beach", "Cambria",
+                "Spend an hour or two, or three combing through all the little " +
+                        "rocks on the beach. Beautiful scenery and the warm rocks feel great under " +
+                        "your feet.",
+                "geo:0,0?q=Moonstone+Beach+Cambria+CA+93428", R.drawable.moonstone,
+                "https://visitcambriaca.com/itinerary-element/moonstone-beach-2/"));
+
 
         // Create an DestinationAdapater, whose data source is a list of Destinations. The
         // adapter knows how to create list items for each item in the list.
@@ -55,13 +65,13 @@ public class OutdoorsActivity extends AppCompatActivity {
         // Find the ListView object in the view hierarchy of the Activity.
         // There should be a ListView with the view ID called list, which is declared in the
         // word_list.xml layout file.
-        ListView listView = (ListView) findViewById(R.id.list);
+        ListView listView = findViewById(R.id.list);
 
         // Make the ListView use the DestinationAdapter we created above, so that the
         // ListView will display list items for each Destination in the list.
         listView.setAdapter(adapter);
 
-        View phoneIcon = (ImageView) findViewById(R.id.phone_icon);
+        View phoneIcon = findViewById(R.id.phone_icon);
 
 
     }

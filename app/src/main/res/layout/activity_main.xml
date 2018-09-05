@@ -1,47 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
 
     <TextView
+        android:id="@+id/dining_text_view"
+        style="@style/CategoryStyle"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:text="@string/dining"
         android:background="@color/DiningColor"
-        style="@style/CategoryStyle"
-        android:onClick="openDiningActivity"/>
+        android:onClick="openDiningActivity"
+        android:text="@string/dining"
+        android:paddingRight="16dp"
+        android:drawableRight="@drawable/baseline_arrow_forward_ios_white_24dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="3dp"/>
+    <!-- adding expand button????? -->
+
 
     <TextView
+        android:id="@+id/outdoours_text_view"
+        style="@style/CategoryStyle"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:text="@string/outdoors"
         android:background="@color/OutdoorsColor"
-        style="@style/CategoryStyle"
-        android:onClick="openOutdoorsActivity"/>
+        android:onClick="openOutdoorsActivity"
+        android:text="@string/outdoors"
+        android:paddingRight="16dp"
+        android:drawableRight="@drawable/baseline_arrow_forward_ios_white_24dp"
+        android:layout_marginBottom="4dp"/>
 
     <TextView
+        android:id="@+id/shopping_text_view"
+        style="@style/CategoryStyle"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:text="@string/shopping"
         android:background="@color/ShoppingColor"
-        style="@style/CategoryStyle"
-        android:onClick="openShoppingActivity"/>
+        android:onClick="openShoppingActivity"
+        android:text="@string/shopping"
+        android:paddingRight="16dp"
+        android:drawableRight="@drawable/baseline_arrow_forward_ios_white_24dp"
+        android:layout_marginBottom="4dp"/>
 
     <TextView
+        android:id="@+id/art_text_view"
+        style="@style/CategoryStyle"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:text="@string/art"
         android:background="@color/ArtColor"
-        style="@style/CategoryStyle"
-        android:onClick="openArtActivity"/>
+        android:onClick="openArtActivity"
+        android:text="@string/art"
+        android:paddingRight="16dp"
+        android:drawableRight="@drawable/baseline_arrow_forward_ios_white_24dp"
+        android:layout_marginBottom="4dp"/>
 
 </LinearLayout>

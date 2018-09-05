@@ -35,8 +35,15 @@ public class ShoppingActivity extends AppCompatActivity {
                         "speeds of 22 mph and have a battery range of 20-40 miles.",
                 "geo:0,0?q=880+Price+St+Pismo+Beach+California+93449", R.drawable.ba,
                 "https://boltabout.com/", "805-858-9702"));
-        destinations.add(new Destination("Place with no address or phone", "ATown",
-                "this is a place with no phone, website or address", R.drawable.bluerose));
+        destinations.add(new Destination("Cove", "Pismo Beach",
+                "COVE by Van Rozeboom Interiors is a full service interior design " +
+                        "studio and home decor boutique located in beautiful Pismo Beack",
+                "geo:0,0?q=880+Price+St+Pismo+Beach+California+93449", R.drawable.cove,
+                "http://www.cove805.com/", "805-556-4325"));
+        destinations.add(new Destination("Phoenix Books", "San Luis Obispo",
+                "Big rambling book store with plenty of bargains.",
+                "geo:0,0?q=990+Monterey+St+San+Luis+Obispo+CA+93401",
+                R.drawable.phoenix, "https://www.yelp.com/biz/phoenix-books-san-luis-obispo"));
 
 
         // Create an DestinationAdapater, whose data source is a list of Destinations. The
@@ -46,7 +53,7 @@ public class ShoppingActivity extends AppCompatActivity {
         // Find the ListView object in the view hierarchy of the Activity.
         // There should be a ListView with the view ID called list, which is declared in the
         // word_list.xml layout file.
-        ListView listView = (ListView) findViewById(R.id.list);
+        ListView listView = findViewById(R.id.list);
 
         // Make the ListView use the DestinationAdapter we created above, so that the
         // ListView will display list items for each Destination in the list.

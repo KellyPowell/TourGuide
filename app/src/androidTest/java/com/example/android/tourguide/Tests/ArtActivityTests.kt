@@ -53,14 +53,14 @@ class ArtActivityTests {
 
     @Test
     @Throws(Exception::class)
-    // click on Tapatio from list, click website, check intent
+    // click on Kelly from list, click website, check intent
     fun clickOnKellyAndLaunchWebsite() {
         artActivityModel.open0AndTapWebsite()
     }
 
     @Test
     @Throws(Exception::class)
-    // click on Tapatio from list, click map, check intent
+    // click on Kelly from list, click map, check intent
     fun clickOnKellyAndLaunchMap() {
         artActivityModel.open0AndTapMap()
     }
